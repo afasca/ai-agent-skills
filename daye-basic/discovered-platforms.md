@@ -57,6 +57,7 @@ This file tracks all platforms discovered across batches to avoid duplicates.
 | 15 | VoltageGPU | voltagegpu.com | 2026-08-24（边缘：api.voltagegpu.com/v1/models 确认 GLM-5.2-TEE $2.3125/$7.3075 与 Kimi-K3-TEE $5.55/$27.75 全部 confidential_compute；⚠️ 无条件免费额度仅覆盖 Qwen3-32B-TEE（3 条匿名+50 条/月），能覆盖 GLM/Kimi 的 $5 额度需推荐码，且官方 /pricing JSON-LD 自认"There's no unconditional free trial"→注册难度 Hard；VOLTAGE EI/SIREN 943 808 824 00016/法国 Solaize/2025 年→中风险） |
 | 21 | TrustedRouter | trustedrouter.com | 2026-09-01（新邮箱注册提供 starter credit、无需绑卡，官网明确可直接选任意 model ID；无鉴权 `/v1/models` 实时确认 625 个模型，含托管 prepaid Claude Opus 5/Sonnet 5、GLM-5.2、Kimi K3；⚠️ 赠金具体金额与有效期未公示。Lore Hex Corp/Delaware C Corp，创始人 Joseph Perla，2026-08-31 宣布 $1.25M seed；新平台、独立口碑少→中风险） |
 | 21 | Retell AI | retellai.com | 2026-09-01（新账号一次性 $10 trial credits、无需付款方式，统一 credit balance 明确承担 voice/LLM/telephony；官方模型枚举与定价页确认托管 Claude Sonnet 5/4.6/4.5、Haiku 4.5；网页测试无需号码或付款方式，费用从 trial balance 扣除。⚠️ 不是通用文本中转而是 voice/chat agent builder；KYC 对出站电话/购号/SMS 为强制，可能自动通过，否则需 Persona 政府证件或人工审核。Retell AI Inc./美国/YC W24/$4.6M seed→低-中风险） |
+| 22 | Fleece AI | fleeceai.app | 2026-09-01（4 天 Starter 试用含 1,000 credits、5 agents，并明确含平台自有 deployment 的 Kimi K3；subprocessor 页确认 Modal Labs 托管其 Kimi K3 inference endpoint，非 BYOK。⚠️ 必须绑卡，4 天后自动转 €49/月；Starter 无 REST API，仅能在 agent/workflow UI 使用；Kimi 每任务 credit 换算未公示。FLEECE AI SASU/法国 SIREN 932329188/Loïc Jané/无已确认外部融资，SOC 2 仍 in progress、独立评价极少→中风险） |
 
 ## Excluded Platforms
 
@@ -171,6 +172,20 @@ This file tracks all platforms discovered across batches to avoid duplicates.
 | Bolna | bolna.ai | Gate 2 失败：$5 注册赠金真实，但 bundled preferred models 仅 OpenAI/Azure OpenAI；Claude 官方路径明确由用户连接 Anthropic 账号并由 Anthropic 收费，无法证明赠金覆盖 Claude |
 | Soverana | soverana.eu | Gate 2 未验证：Claude 3.7 Sonnet managed route 与“Private Beta · No credit card”成立，但仍在 waitlist，未公示免费额度、试用时长或目标模型 entitlement |
 | 1endpoint | 1endpoint.dev | Gate 2 失败：公开目录有 Claude Opus 5/Sonnet 5、GLM-5.2、Kimi K3，但只有按量 credits 定价，无注册赠金、试用或免费配额 |
+| HarnessRouter | harnessrouter.ai | 边界降级排除：模型与赠金闭环最强（Claude Code 托管 sandbox；Claude Sonnet 4.6 示例任务 83.5 credits、Opus 4.8 为 223 credits；绑卡解锁限时 500 free credits），但官方支付披露只写 `card` + Stripe，未列实际可用卡组织；未进入登录后的 merchant-specific Checkout，故无法确认未启用 UnionPay。Lumentree Corporation/California，创始人 Kuanze Ma、Richard Song，产品新且无默认 SLA→中风险 |
+| Parallax AI | parallax.kr | 支付方式硬门槛未闭环：公开加密模型目录把 `claude-sonnet-5` 标为 `isFreeUserAccessible:true`，Free 档 30K tokens/月（30 credits，每月重置）成立；但公开页只写 Stripe 接受 “all major credit cards”，登录后的 merchant-specific Checkout 无法检查，不能确认未启用 UnionPay。Parallax AI, LLC/Delaware/Sanghoon Han/近似单人团队，无已确认融资与独立口碑→中高风险 |
+| KONEXIN | konexin.co.kr | Gate 1/2 均过（Free 档 Claude Haiku 4.5、Sonnet 5，最多 50 requests/day），但当前客户端含可工作的中文 locale、完整中文翻译和 locale cookie，命中中文本地化硬排除 |
+| Experiential Labs | experientiallabs.ai | 支付方式硬门槛未闭环：平台托管目录有 Claude Opus/Sonnet、GLM 5.3、Kimi K2.6；官方 billing 文档称新组织获 welcome credit 且 platform-funded lane 从余额扣费，原则上覆盖目标模型，但金额/有效期与具体支付处理商、支付方式均未公开。YC S26、Kion Fallah/Silen Naihin、两人团队；法律实体/注册州未公示→中风险 |
+| TokenPAPA / LemonData | tokenpapa.ai / lemondata.cc | 支付硬门槛失败：两者均有注册送额度及 Claude/GLM/Kimi 相关模型线索，但当前官方支付资料出现微信支付和/或支付宝，直接排除 |
+| BitRouter | bitrouter.ai | 免费 startup credits 可覆盖 open-weight GLM/Kimi，但官方存在完整 `/zh/` 中文文档，命中中文本地化硬排除；另需 founder call 人工定额→注册 Hard |
+| MoClaw | moclaw.ai | 托管 Kimi K3 页面与 1,000 free credits 线索存在，但官方完整支持 `/zh-cn/` 及中文 pricing/integration 页面，命中中文本地化硬排除 |
+| Apito | apito.ai | `$0.50` 注册赠金并可申请额外 `$1`，支持 Claude，但官方完整 `/zh/` 中文站，且额外赠金流程依赖微信客服，直接排除；不同页面出现 Apito LLC/NiceCloud LLC→高风险 |
+| Claudio Legal | claudio.legal | 支付方式硬门槛未闭环：邮箱注册无卡获 $1 初始 credit，官方 app bundle 明确可用同一余额调用托管 Claude Opus 5/4.8/4.7/4.6 与 Sonnet 5/4.6，提供 OpenAI/Anthropic-compatible endpoints；locale 仅英文/葡语。当前支付披露为 PIX，订阅另列 Stripe 信用卡/Apple Pay/Google Pay/Link，但未列实际卡组织且未进入 merchant-specific Checkout，不能确认未启用 UnionPay，故按与 HarnessRouter/Parallax 相同标准排除。仅自述 Tokevate Solution LLC/Wyoming，外部登记、创始人、团队、融资与独立评价均无法核实→高风险 |
+| TokenBay | tokenbay.com | 证据不足：官方索引称 500 free credits 且模型页有 Claude/GLM/Kimi，但金额适用范围、有效期、绑卡和支付方式均未闭环；直接访问被 Cloudflare 403，实体/创始人/融资不可查→高风险 |
+| Respan（原 Keywords AI） | respan.ai / keywordsai.co | 当前托管目录确认 Claude Opus 5/Sonnet 5 为 managed 且可用 credits，但现行 pricing 仅写无卡 `Start for free`，旧品牌的 `$15 credits` 无法证明 2026-09-01 仍有效，Gate 2 未闭环 |
+| Experiential/Fleece 关联之外的本批 developer tools | rocket.new / fine.dev / cosine.sh / codegen.com / polymet.ai / totalum.app / orchids.app / zoer.ai | Gate 1/2 未闭环：有免费 credits 的未由官方证明覆盖托管 Claude/GLM/Kimi；提到 Claude 的多为付费 premium、外部订阅或 BYOK 路径 |
+| 本批无目标模型的免费平台 | infr.sh / route.cat / aihorde.net / hostnownow.com / euthopia.ai | 免费调用、免费云额度或试用机制存在，但当前官方目录无 Claude/GLM/Kimi，或未能把免费权益与目标模型绑定，Gate 1 失败 |
+| 本批目录/内容站 | freeaiapi.org / x402-list.com / x402scan.com | 仅提供目录、文章或生态索引，不是实际 inference provider，不得当作服务商收录 |
 
 ## Batch 2 Notes
 
@@ -202,3 +217,10 @@ This file tracks all platforms discovered across batches to avoid duplicates.
 
 - **严格去重范围**：除 main 的 tracker 和 `avoid-domains.txt` 外，本批还读取了尚未合并的 `origin/vorflux/batch-18-scout`、`origin/vorflux/batch-18-scout-20260830`、`origin/vorflux/batch-18-strict-scout`、`origin/vorflux/batch-19-strict-scout`、`origin/vorflux/batch-20-avoidance`；这些分支合计比 main 多 304 个域名，同产品别名也视为重复。
 - **结果**：严格去重后仅 TrustedRouter、Retell AI 达到收录标准，不为目标数量凑数。LLM Hub 的模型与赠金证据成立，但因登录后的区域支付方式未实测而按硬门槛降为排除。未创建账号、提交 KYC、绑卡或充值；其余无卡条件按官方公开条款采信。
+
+## Batch 22 Notes
+
+- **当前权威去重范围**：远端在本批开始时只剩 `main`；Batch 21 备注中的 Batch 18–20 临时远端分支已经不存在，不能声称本批读取了这些分支。本批实际以 main 的 **1483 条唯一 `avoid-domains.txt` 条目**加 tracker URL host 做权威范围；两者在开批时的并集为 **1486 个唯一 host**，并对同产品换域名、子域名、旧品牌和改名做人工别名去重。
+- **四路实际搜索方向**：A=2026 年 6 月以来的 Show HN/GitHub/新发布 indie gateway；B=把目标模型打包进免费档的 developer tool、agent/workflow/coding SaaS；C=欧洲、日韩、印度、东南亚、中东、拉美与非洲区域平台；D=x402/crypto/decentralized inference、匿名 playground 与 startup/education/OSS credits。实际查询覆盖 `"Claude Sonnet 5" "free credits"`、`"Claude Opus 5" "free tier" API gateway`、`"GLM-5.2" "no credit card" "free credit" API`、`"Kimi K3" "free trial" workflow automation`、`site:news.ycombinator.com "Show HN" "LLM gateway"`、`site:github.com "Kimi K3" "free" API gateway`，并使用英文、日文、韩文、西语、葡语、法语等区域词组检索。
+- **结果不凑数**：严格核验后只收录 **Fleece AI**；HarnessRouter、Parallax AI、Claudio Legal、Experiential Labs 等其余候选均按上表所列的支付硬门槛或证据缺口排除。Claudio 的 $1 无卡 credit 与 Claude 模型路径虽闭环，但 Stripe 实际卡组织未公开，按与 HarnessRouter/Parallax 相同标准降入过滤日志。
+- **本批实测边界**：未创建账号、验证邮箱、提交 KYC、绑卡、充值或执行付费 checkout；Fleece 与各边界候选的语言、模型及支付方式按当前官网、sitemap、公开 bundle、定价/条款页披露核验，无法保证 checkout 对每个国家/账号动态呈现完全相同。Fleece 公司登记通过法国政府企业 API 复核；Claudio 自述的 Wyoming 实体则未获得外部登记佐证。未真实调用 Kimi/Claude，公开 credits 也无法换算为固定 token 数。
