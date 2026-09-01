@@ -55,6 +55,8 @@ This file tracks all platforms discovered across batches to avoid duplicates.
 | 15 | LLMGraph | llmgraph.ai | 2026-08-24（边缘：首页明示 Claude Sonnet 4.5 + Claude Haiku 4.5 平台托管，注册送 free model credits 无卡；⚠️ 免费额度金额全站未公示、pricing FAQ 自相矛盾（标题"Do I need a credit card to start? Yes"正文却说 no card required）、无免费档（最低 Hobby $40/月+$5/席）；Katabarwa Labs Inc./特拉华+西雅图/2026 年成立、第三方零评价→中高风险） |
 | 15 | JetBrains AI Free | jetbrains.com | 2026-08-24（边缘：AI Free 档含 limited cloud quota 且 Anthropic 为官方列名 provider、buy 页矩阵有"Claude Agent"行；⚠️ 两处官方页直接矛盾——ai-service-license 称"one-time, non-renewable limited quota"，ai-ides-faq 称"included quota resets every 30 days"；需先持合格 IDE 授权（IntelliJ IDEA CE / PyCharm CE 明确排除）→注册 Hard；另有地区白名单限制；supported-llms 文档 404 无法确认具体 Claude 型号；JetBrains s.r.o./布拉格/2000 年/2000+ 员工→低风险） |
 | 15 | VoltageGPU | voltagegpu.com | 2026-08-24（边缘：api.voltagegpu.com/v1/models 确认 GLM-5.2-TEE $2.3125/$7.3075 与 Kimi-K3-TEE $5.55/$27.75 全部 confidential_compute；⚠️ 无条件免费额度仅覆盖 Qwen3-32B-TEE（3 条匿名+50 条/月），能覆盖 GLM/Kimi 的 $5 额度需推荐码，且官方 /pricing JSON-LD 自认"There's no unconditional free trial"→注册难度 Hard；VOLTAGE EI/SIREN 943 808 824 00016/法国 Solaize/2025 年→中风险） |
+| 21 | TrustedRouter | trustedrouter.com | 2026-09-01（新邮箱注册提供 starter credit、无需绑卡，官网明确可直接选任意 model ID；无鉴权 `/v1/models` 实时确认 625 个模型，含托管 prepaid Claude Opus 5/Sonnet 5、GLM-5.2、Kimi K3；⚠️ 赠金具体金额与有效期未公示。Lore Hex Corp/Delaware C Corp，创始人 Joseph Perla，2026-08-31 宣布 $1.25M seed；新平台、独立口碑少→中风险） |
+| 21 | Retell AI | retellai.com | 2026-09-01（新账号一次性 $10 trial credits、无需付款方式，统一 credit balance 明确承担 voice/LLM/telephony；官方模型枚举与定价页确认托管 Claude Sonnet 5/4.6/4.5、Haiku 4.5；网页测试无需号码或付款方式，费用从 trial balance 扣除。⚠️ 不是通用文本中转而是 voice/chat agent builder；KYC 对出站电话/购号/SMS 为强制，可能自动通过，否则需 Persona 政府证件或人工审核。Retell AI Inc./美国/YC W24/$4.6M seed→低-中风险） |
 
 ## Excluded Platforms
 
@@ -162,6 +164,13 @@ This file tracks all platforms discovered across batches to avoid duplicates.
 | CloudFerro / Krutrim / E2E Networks / Float16 / Siam.ai / FPT Cloud / Maritaca / Magalu Cloud | - | Gate 1 未成立：Maritaca 仅自研 Sabiá 系列（R$20 赠金），Krutrim（₹10,000）与 E2E（₹2,000）赠金为 GPU/云额度非目标模型推理，Magalu 无此类模型 API |
 | Simstudio.ai | simstudio.ai | 与已排除 sim.ai 为同一产品，且 TLS 证书错误（no alternative certificate subject name matches） |
 | Helyx AI（重复来源） | helyxai.space | Lane C 亦独立触达并弃用：社区目录自认"the website does not currently publish exact details such as the number of free credits, token limits, daily or monthly usage quotas" |
+| LLM Hub | llmhub.one | 支付方式硬门槛未闭环：€1 通用赠金与托管 Claude/GLM/Kimi 均成立，但官方只笼统写 Stripe 的 “some regional payment methods”，登录后的 Mollie 实际 methods 未验证；在确认商户未启用微信/支付宝/银联前不收录。Logicos Software/荷兰 KvK 97161705→中风险 |
+| EmberCloud | embercloud.ai | Gate 2 严格失败：$100 API credits 确实覆盖 GLM-5.2，但官方要求获批后先 “Add $5 to verify your company and start building”；非零成本免费权益，且人工审批/企业验证为 Hard |
+| ElevenLabs Agents | elevenlabs.io | 命中约束 1：官方存在完整中文站 `elevenlabs.io/zh`，直接违反“无中文本地化”硬门槛；其 Free credits 与原生 Claude 目录因此不再继续作为入选证据 |
+| Plivo | plivo.com | Gate 1 失败：$10/3 周无卡 trial 可用于托管 AI Agents，但官方 managed picker 仅 GPT/Llama；Anthropic 只出现在要求用户 API key 与自建 WebSocket pipeline 的 BYOK Audio Streaming 路径 |
+| Bolna | bolna.ai | Gate 2 失败：$5 注册赠金真实，但 bundled preferred models 仅 OpenAI/Azure OpenAI；Claude 官方路径明确由用户连接 Anthropic 账号并由 Anthropic 收费，无法证明赠金覆盖 Claude |
+| Soverana | soverana.eu | Gate 2 未验证：Claude 3.7 Sonnet managed route 与“Private Beta · No credit card”成立，但仍在 waitlist，未公示免费额度、试用时长或目标模型 entitlement |
+| 1endpoint | 1endpoint.dev | Gate 2 失败：公开目录有 Claude Opus 5/Sonnet 5、GLM-5.2、Kimi K3，但只有按量 credits 定价，无注册赠金、试用或免费配额 |
 
 ## Batch 2 Notes
 
@@ -188,3 +197,8 @@ This file tracks all platforms discovered across batches to avoid duplicates.
 - **本批未能覆盖的部分（如实记录）**: Reddit 对四路的 JSON/网页抓取全程返回 403，所有口碑判断均基于公司登记、官方页与新闻报道，无一手 Reddit/HN 帖文；三条 Cloudflare 挑战站（Foveance/AkaRouter/Leanroute）完全无法评估；无任何候选执行了真实注册与绑卡，故除上述两项实测外，所有"无需绑卡"均为按官方公示措辞采信；Sakura 的日本电话认证与外国信用卡能否通过未验证；AKI.IO 的"several million tokens"与 Regolo 的"Core Models"是否含 glm5.2 均需账号才能钉死。
 - **avoid-domains.txt 已升级为权威去重清单**: 除本批新遇的 105 个域名外，另补入 Batch 9-14 追踪表中 main 尚缺的域名及其派生 apex，使 main 上的名单不再依赖那 5 条未合并分支即可自洽。最终 **1153 行、无重复、无空行**（833 → 1153，+320）。后续批次只需读这一个文件即可完成去重。
 - **结构性建议**: 追踪表已在 6 条分支上分叉，建议按 batch9 → batch11 → batch12 → batch13 → batch14 → batch15 顺序合并。已实测确认 batch9-14 分支的 diff 虽显示"删除 826 行 avoid list"，但因合并基点 e15410b 本就没有该文件，三方合并会自动保留 main 侧的新增文件——无需任何手工干预。
+
+## Batch 21 Notes
+
+- **严格去重范围**：除 main 的 tracker 和 `avoid-domains.txt` 外，本批还读取了尚未合并的 `origin/vorflux/batch-18-scout`、`origin/vorflux/batch-18-scout-20260830`、`origin/vorflux/batch-18-strict-scout`、`origin/vorflux/batch-19-strict-scout`、`origin/vorflux/batch-20-avoidance`；这些分支合计比 main 多 304 个域名，同产品别名也视为重复。
+- **结果**：严格去重后仅 TrustedRouter、Retell AI 达到收录标准，不为目标数量凑数。LLM Hub 的模型与赠金证据成立，但因登录后的区域支付方式未实测而按硬门槛降为排除。未创建账号、提交 KYC、绑卡或充值；其余无卡条件按官方公开条款采信。
