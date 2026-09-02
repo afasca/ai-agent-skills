@@ -223,6 +223,12 @@ This file tracks all platforms discovered across batches to avoid duplicates.
 | Lorka AI | lorka.ai | 官网定价为 $29.99/月起，未找到当前第一方免费 credits 或具体免费 Claude 权益，Gate 2 失败 |
 | RoninForge | roninforge.org | 仅整理 GitHub AI Credits/Copilot 计费信息，不是实际 hosted inference provider |
 | Claude 内容站 | claudefa.st / claudedirectory.org | 教程、模型资料或目录，不是提供平台托管免费推理的服务商 |
+| Anthropic-credit 内容站 | aicreditmart.com / claudeapikey.dev | 仅转述未被 Anthropic 当前第一方页面稳定确认的 `$5 starter credits`，不是实际 inference provider；金额/有效期说法互相冲突，不收录 |
+| Claude 教程/媒体站 | shareuhack.com / futureaipress.com / leaveit2ai.com | 仅教程、新闻或模型资料，不提供平台托管的免费目标模型 inference |
+| Botnation | botnation.ai | 搜索结果只确认 Claude 自身免费计划，未找到 Botnation 官方材料将其免费档绑定具体 Claude 型号并承担推理费用，Gate 1/2 不闭环 |
+| Felo AI | felo.ai / openapi.felo.ai | 官网称免费用户可试 Claude Sonnet 5，公开 FAQ 仅列 Visa/Mastercard/AMEX；但有完整 `zh-Hans` 中文本地化和人民币定价，触发中文本地化硬排除。实时访客页还要求登录才能打开模型选择器，未执行真实调用 |
+| Modal | modal.com | 官网有每月 $30 compute credit 与 Kimi K3 页面，但共享 Kimi K3 API 面向 Team/Enterprise，免费档能否用该精确 endpoint 未闭环；同时属于主流云计算平台，不收录 |
+| Kilo | kilo.ai | Sonnet 4.6 仅“launch week”限时免费，当前已非稳定权益；常规路由按上游价格扣 credits，且 merchant 支付方式未完成无中式支付验证 |
 
 ## Batch 2 Notes
 
@@ -285,3 +291,10 @@ This file tracks all platforms discovered across batches to avoid duplicates.
 - **纠偏优先**：对上一轮 Tusk Central AI 做 live UI 复核。模型选择器当前明确显示 `GLM 5.2 by Z.ai — Uses Credits`，与其 `/models/glm/` 静态文章所称 `Free Unlimited` 冲突，因此撤销 Batch 25 发现资格。
 - **本轮结果**：仔细补查后无新平台通过全部门槛。候选仍主要因已在 2,125 条 avoid 清单、仅内容站、BYOK、免费权益未与具体目标模型闭环，或 merchant 支付方式无法确认而排除。
 - **证据**：实际浏览器访问 `https://new.tusksearch.com/ai/` 并打开模型选择器；GLM 5.2 的实时状态为 `Uses Credits`。未购买 credits 或发送付费请求。
+
+## Batch 27 Notes
+
+- **严格复核**：本轮不使用搜索摘要作为收录证据，只把搜索用于发现候选，再回到官网/条款/定价与实时 UI 确认。新线索大多已在 2,126 条 avoid 清单中，或只是内容站。
+- **实时产品检查**：Felo 的 Sonnet 5 深链当前先弹登录；关闭后页面显示 0 credits，尝试切换模型又重新要求登录。其官方文章虽称 Sonnet 5 免费试用，但平台提供完整 `zh-Hans` 本地化及人民币定价，已触发硬排除，因此未冒进注册或计入发现。
+- **结果**：无新平台通过全部门槛。现有线索普遍无法同时证明“具体 Claude/GLM/Kimi + 平台承担的免费权益 + merchant 页面明确无微信/支付宝/银联”，或直接触发中文本地化/主流平台/限时活动排除。
+- **新增避免**：6 个新域名均已写入 avoid，防止下一轮重复；其余候选已在历史清单中。
