@@ -298,3 +298,10 @@ This file tracks all platforms discovered across batches to avoid duplicates.
 - **实时产品检查**：Felo 的 Sonnet 5 深链当前先弹登录；关闭后页面显示 0 credits，尝试切换模型又重新要求登录。其官方文章虽称 Sonnet 5 免费试用，但平台提供完整 `zh-Hans` 本地化及人民币定价，已触发硬排除，因此未冒进注册或计入发现。
 - **结果**：无新平台通过全部门槛。现有线索普遍无法同时证明“具体 Claude/GLM/Kimi + 平台承担的免费权益 + merchant 页面明确无微信/支付宝/银联”，或直接触发中文本地化/主流平台/限时活动排除。
 - **新增避免**：6 个新域名均已写入 avoid，防止下一轮重复；其余候选已在历史清单中。
+
+## Batch 28 Notes
+
+- **按避免清单执行**：本轮严格以 `avoid-domains.txt` 为边界；命中域名及其子域名、别名和同产品换域名立即停止深入核验，不以新 host 绕过已有排除。`tokenrouter.com`（PaleBlueDot AI 托管模型平台）与 `tokenrouter.io`（TokenRouter LLC BYOK 网关）是不同服务，证据未混用。
+- **证据标准**：搜索摘要只用于发现线索，不作为收录依据；优惠须由当前第一方模型页、定价/条款或实时产品页闭环。TokenRouter 的 Kimi K3 活动与 AI Compute Australia 的 `WELCOME100` 均未在当前第一方页面确认仍有效，因此不构成当前免费权益。
+- **结果不凑数**：无新平台同时通过“具体 Claude/GLM/Kimi 型号 + 平台承担的当前真实免费权益 + merchant 页面明确无微信/支付宝/银联”全部硬门槛。Free.ai 第一方模型页明确显示 `GLM 5.3 requires purchased tokens`，其每日免费 tokens 不覆盖该目标模型，Gate 2 失败；Rewind.ai 的当前第一方页面可闭环 GLM 5.3、免费 tokens 和 Stripe/card-wallet 支付，但该域名已在历史 avoid 清单，故不重复收录。
+- **新增避免**：20 个本轮新出现的 host/别名已写入 avoid，包括既有产品子域名、官方 Kimi 别名、内容/评测站及证据不闭环的平台；未注册账号、提交 KYC、绑卡、充值或发送真实付费模型请求。
