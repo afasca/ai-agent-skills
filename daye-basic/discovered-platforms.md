@@ -59,7 +59,6 @@ This file tracks all platforms discovered across batches to avoid duplicates.
 | 21 | Retell AI | retellai.com | 2026-09-01（新账号一次性 $10 trial credits、无需付款方式，统一 credit balance 明确承担 voice/LLM/telephony；官方模型枚举与定价页确认托管 Claude Sonnet 5/4.6/4.5、Haiku 4.5；网页测试无需号码或付款方式，费用从 trial balance 扣除。⚠️ 不是通用文本中转而是 voice/chat agent builder；KYC 对出站电话/购号/SMS 为强制，可能自动通过，否则需 Persona 政府证件或人工审核。Retell AI Inc./美国/YC W24/$4.6M seed→低-中风险） |
 | 22 | Fleece AI | fleeceai.app | 2026-09-01（4 天 Starter 试用含 1,000 credits、5 agents，并明确含平台自有 deployment 的 Kimi K3；subprocessor 页确认 Modal Labs 托管其 Kimi K3 inference endpoint，非 BYOK。⚠️ 必须绑卡，4 天后自动转 €49/月；Starter 无 REST API，仅能在 agent/workflow UI 使用；Kimi 每任务 credit 换算未公示。FLEECE AI SASU/法国 SIREN 932329188/Loïc Jané/无已确认外部融资，SOC 2 仍 in progress、独立评价极少→中风险） |
 | 23 | JTH IA | jthia.jorgetellez.com.mx | 2026-09-02（西语墨西哥 Web UI；注册送 50 credits，ESPECTRO=Claude Sonnet 4.6、10 credits/次→至少 5 次；公开表单为邮箱/Firebase、无电话/绑卡/常规 KYC→注册表面 Easy，但实际赠金到账及首次免费调用耗时未实测；付款仅公开 SPEI/OXXO/BanCoppel；Jorge Téllez Hernández 以 Veracruz persona física con actividad empresarial 运营，未找到可验证的融资、独立口碑或 SLA，手工 WhatsApp 入账且不退款→高风险） |
-| 25 | Tusk Central AI | new.tusksearch.com / tuskcentral.ai | 2026-09-02（浏览器多模型 Chat UI，非通用 API；官方模型页明确 Z.ai GLM 5.2 属 `Free Unlimited`，无日限、无 credits、无订阅，guest 可直接使用；注册非必需，Google/Apple/Discord 仅用于保存会话和同步 credits→Easy、首次使用约 1 分钟但未实测真实回答；Virtual World Computing, LLC/美国 California/Santa Barbara，成立于 2008、Jeff Bermant 创始人；付费 deep-thinking credits 经 Stripe，官网未正向列出微信/支付宝/银联；BBB 为 B-且独立评价有限→中风险，建议仅非敏感试用） |
 
 ## Excluded Platforms
 
@@ -219,6 +218,7 @@ This file tracks all platforms discovered across batches to avoid duplicates.
 | Pabrik Ebook / Dominus AI | pabrikebook.com / dominusplatform.com | Pabrik Ebook 当前为停放域名且证书不匹配；Dominus 的 $1 赠金仅配自有 `dominus-flash/pro`，未证明目标模型 |
 | CognariAI / APIPick / API.co.id / Atomic Chat | cognariai.com / apipick.com / api.co.id / atomic.chat | 免费的是语音、搜索/工具、印尼公共 API 或本地下载模型，不是平台托管的 Claude/GLM/Kimi inference |
 | 其余新 gateway 线索 | openpipe.ai / withmartian.com / predibase.com / salad.com / fal.ai / unifai.ai / modelgate.ai / glmroutes.com / tokenless.com | 未找到可由现行第一方材料同时闭环“具体 Claude/GLM/Kimi + 真实零成本目标模型权益”；不采信缓存、兼容协议或第三方摘要 |
+| Tusk Central AI | new.tusksearch.com / tuskcentral.ai | **Batch 25 纠偏**：官网静态模型文章称 GLM 5.2 `Free Unlimited`，但 2026-09-02 浏览器实测实时模型选择器明确标为 `Uses Credits`；当前 live UI 与营销页冲突，免费目标模型 entitlement 不成立，撤销收录并保留 avoid |
 | VM0 | vm0.ai | 新 workspace 有 starter credits，models 页含 Claude Sonnet 5；但官网未公开 starter 数量，也未明确免费 credits 与 Sonnet 5 的消费范围/可完成调用数，免费目标模型 entitlement 不闭环 |
 | Lorka AI | lorka.ai | 官网定价为 $29.99/月起，未找到当前第一方免费 credits 或具体免费 Claude 权益，Gate 2 失败 |
 | RoninForge | roninforge.org | 仅整理 GitHub AI Credits/Copilot 计费信息，不是实际 hosted inference provider |
@@ -279,3 +279,9 @@ This file tracks all platforms discovered across batches to avoid duplicates.
 - **快速轮次**：按用户要求压缩为快速检索，重点补查 2026 新模型免费 UI/agent/API 路径，并对 2,113 条既有 avoid 清单做即时去重。
 - **结果**：严格核验后仅收录 Tusk Central AI。VM0 的 starter credits 与 Sonnet 5 虽分别成立，但两者关联和额度未闭环；Lorka 为付费，RoninForge 与 Claude 内容站不是 inference provider。
 - **验证边界**：未发送真实 GLM 请求、登录、购买 Stripe credits 或进入动态 checkout；`Free Unlimited`、guest 入口、运营主体与支付处理均来自 2026-09-02 可访问的官网模型页、How It Works、Terms、Privacy 与 Contact 页面。Tusk 仅适合 Web Chat，不提供通用 API。
+
+## Batch 26 Notes
+
+- **纠偏优先**：对上一轮 Tusk Central AI 做 live UI 复核。模型选择器当前明确显示 `GLM 5.2 by Z.ai — Uses Credits`，与其 `/models/glm/` 静态文章所称 `Free Unlimited` 冲突，因此撤销 Batch 25 发现资格。
+- **本轮结果**：仔细补查后无新平台通过全部门槛。候选仍主要因已在 2,125 条 avoid 清单、仅内容站、BYOK、免费权益未与具体目标模型闭环，或 merchant 支付方式无法确认而排除。
+- **证据**：实际浏览器访问 `https://new.tusksearch.com/ai/` 并打开模型选择器；GLM 5.2 的实时状态为 `Uses Credits`。未购买 credits 或发送付费请求。
