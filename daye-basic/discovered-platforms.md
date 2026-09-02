@@ -58,6 +58,7 @@ This file tracks all platforms discovered across batches to avoid duplicates.
 | 21 | TrustedRouter | trustedrouter.com | 2026-09-01（新邮箱注册提供 starter credit、无需绑卡，官网明确可直接选任意 model ID；无鉴权 `/v1/models` 实时确认 625 个模型，含托管 prepaid Claude Opus 5/Sonnet 5、GLM-5.2、Kimi K3；⚠️ 赠金具体金额与有效期未公示。Lore Hex Corp/Delaware C Corp，创始人 Joseph Perla，2026-08-31 宣布 $1.25M seed；新平台、独立口碑少→中风险） |
 | 21 | Retell AI | retellai.com | 2026-09-01（新账号一次性 $10 trial credits、无需付款方式，统一 credit balance 明确承担 voice/LLM/telephony；官方模型枚举与定价页确认托管 Claude Sonnet 5/4.6/4.5、Haiku 4.5；网页测试无需号码或付款方式，费用从 trial balance 扣除。⚠️ 不是通用文本中转而是 voice/chat agent builder；KYC 对出站电话/购号/SMS 为强制，可能自动通过，否则需 Persona 政府证件或人工审核。Retell AI Inc./美国/YC W24/$4.6M seed→低-中风险） |
 | 22 | Fleece AI | fleeceai.app | 2026-09-01（4 天 Starter 试用含 1,000 credits、5 agents，并明确含平台自有 deployment 的 Kimi K3；subprocessor 页确认 Modal Labs 托管其 Kimi K3 inference endpoint，非 BYOK。⚠️ 必须绑卡，4 天后自动转 €49/月；Starter 无 REST API，仅能在 agent/workflow UI 使用；Kimi 每任务 credit 换算未公示。FLEECE AI SASU/法国 SIREN 932329188/Loïc Jané/无已确认外部融资，SOC 2 仍 in progress、独立评价极少→中风险） |
+| 23 | JTH IA | jthia.jorgetellez.com.mx | 2026-09-02（西语墨西哥 Web UI；注册送 50 credits，ESPECTRO=Claude Sonnet 4.6、10 credits/次→至少 5 次；公开表单为邮箱/Firebase、无电话/绑卡/常规 KYC→注册表面 Easy，但实际赠金到账及首次免费调用耗时未实测；付款仅公开 SPEI/OXXO/BanCoppel；Jorge Téllez Hernández 以 Veracruz persona física con actividad empresarial 运营，未找到可验证的融资、独立口碑或 SLA，手工 WhatsApp 入账且不退款→高风险） |
 
 ## Excluded Platforms
 
@@ -186,6 +187,20 @@ This file tracks all platforms discovered across batches to avoid duplicates.
 | Experiential/Fleece 关联之外的本批 developer tools | rocket.new / fine.dev / cosine.sh / codegen.com / polymet.ai / totalum.app / orchids.app / zoer.ai | Gate 1/2 未闭环：有免费 credits 的未由官方证明覆盖托管 Claude/GLM/Kimi；提到 Claude 的多为付费 premium、外部订阅或 BYOK 路径 |
 | 本批无目标模型的免费平台 | infr.sh / route.cat / aihorde.net / hostnownow.com / euthopia.ai | 免费调用、免费云额度或试用机制存在，但当前官方目录无 Claude/GLM/Kimi，或未能把免费权益与目标模型绑定，Gate 1 失败 |
 | 本批目录/内容站 | freeaiapi.org / x402-list.com / x402scan.com | 仅提供目录、文章或生态索引，不是实际 inference provider，不得当作服务商收录 |
+| Kenari Grant | kenari.id / grant.kenari.id | 条件性免费 Kimi K3 grant 成立，但已在未合并 `origin/vorflux/batch-23-scout` 记录并加入黑名单，不得重复收录；另有人工审核、印尼开发者优先及运营主体不透明风险 |
+| Hicap | hicap.ai / portal.hicap.ai | 模型与免费额度成立：官方目录列 Claude Haiku 4.5 Demo，50 requests/day、Cost: Free；但公开页未披露实际支付轨道，portal 本次不可用，也未确认免卡额度的真实注册流程，按支付与注册证据缺口排除 |
+| Hume AI | hume.ai | 免费账户 $20 credits 与 Hume-managed external Claude 均有官方文档，但未明确 $20 可抵扣 Claude supplemental usage；商户接受的支付方式、是否免卡、KYC/电话要求亦未公开，Gate 2 与注册/支付链路不闭环 |
+| Vulcan AI | vulcan-ai.co.uk | 100 starting credits + 每 2 小时 100、Claude Haiku/Sonnet/Opus 等模型与免卡文案较强；但运营者仅为 `ahw101`，无法律主体/地址，且同名 UK 公司已于 2026-07-07 注销；又与 Puter.js user-pays 模式存在来源矛盾，按实体与 entitlement 缺口排除 |
+| aibox | aibox.swiss | 14 天、200 credits、无卡试用与 Claude/Kimi 品牌文案成立；但未公布 Claude 具体型号，Kimi 属另售 CHF 15/月起的 Swiss LLM Layer，无法证明 200 trial credits 覆盖 Kimi，Gate 1/2 关联不闭环 |
+| TutorGPT | tutorgpt.io | 有 Kimi K3 每日额度，但维护完整简体中文本地化 `/zh-CN/`，违反无中文约束 |
+| Claudin.io / Claudinio | claudin.io | 25 requests/day、无卡文案成立，但目录仅有自有 `claudius` / `claudinio` 模型，无法证明属于 Anthropic Claude/GLM/Kimi，Gate 1 失败 |
+| Murmell | murmell.com | 仅连接用户已付费的订阅/API keys，属于 BYOK，Gate 1 的平台托管路径不成立 |
+| APIMaster / SCNet | apimaster.ai / scnet.cn | APIMaster 官方材料称无免费 tier、最低消费 $1，且存在中文本地化/支付宝微信支付；SCNet 为中文、中国市场、人民币付费计划，均排除 |
+| Wayforth / AgentPay | wayforth.io / agentpay.me | 免费 allowance/credits 存在，但当前托管路径未包含 Claude/GLM/Kimi：Wayforth 路由为 Groq/Together/Mistral/Gemini，AgentPay 的 $1 credit 是 MCP server 额度，Gate 1 失败 |
+| AntSeed | antseed.com | 买方必须充值 USDC，无免费 Claude/GLM/Kimi 权益，Gate 2 失败 |
+| Wraith | wraith-api.onrender.com | 未找到权威模型清单证明当前托管 Claude/GLM/Kimi，Gate 1 未验证 |
+| ModelGrep / LLM24 | modelgrep.com / llm24.net | 仅为价格/模型目录，免费条目指向已知服务商，不是实际 inference provider |
+| AvenChat / Kimi fan wrappers | avenchat.com / kimik3max.com / aiextension.ai | AvenChat 免费模型仅确认 Qwen/Gemma；Kimi fan/reference 页面无可核验运营主体；AIExtension 为工具目录而非 inference provider，均不作为合格发现 |
 
 ## Batch 2 Notes
 
@@ -224,3 +239,9 @@ This file tracks all platforms discovered across batches to avoid duplicates.
 - **四路实际搜索方向**：A=2026 年 6 月以来的 Show HN/GitHub/新发布 indie gateway；B=把目标模型打包进免费档的 developer tool、agent/workflow/coding SaaS；C=欧洲、日韩、印度、东南亚、中东、拉美与非洲区域平台；D=x402/crypto/decentralized inference、匿名 playground 与 startup/education/OSS credits。实际查询覆盖 `"Claude Sonnet 5" "free credits"`、`"Claude Opus 5" "free tier" API gateway`、`"GLM-5.2" "no credit card" "free credit" API`、`"Kimi K3" "free trial" workflow automation`、`site:news.ycombinator.com "Show HN" "LLM gateway"`、`site:github.com "Kimi K3" "free" API gateway`，并使用英文、日文、韩文、西语、葡语、法语等区域词组检索。
 - **结果不凑数**：严格核验后只收录 **Fleece AI**；HarnessRouter、Parallax AI、Claudio Legal、Experiential Labs 等其余候选均按上表所列的支付硬门槛或证据缺口排除。Claudio 的 $1 无卡 credit 与 Claude 模型路径虽闭环，但 Stripe 实际卡组织未公开，按与 HarnessRouter/Parallax 相同标准降入过滤日志。
 - **本批实测边界**：未创建账号、验证邮箱、提交 KYC、绑卡、充值或执行付费 checkout；Fleece 与各边界候选的语言、模型及支付方式按当前官网、sitemap、公开 bundle、定价/条款页披露核验，无法保证 checkout 对每个国家/账号动态呈现完全相同。Fleece 公司登记通过法国政府企业 API 复核；Claudio 自述的 Wyoming 实体则未获得外部登记佐证。未真实调用 Kimi/Claude，公开 credits 也无法换算为固定 token 数。
+
+## Batch 23 Notes
+
+- **跨分支去重**：除 main 的 1,547 条 avoid 记录与 Batch 1–22 tracker 外，本批联合检查了未合并分支 `origin/vorflux/batch-23-scout` @ `9d26f74`、`origin/vorflux/batch-23-strict-scout` @ `4e9a458`、`origin/vorflux/batch-24-scout` @ `223d12e`；JTH IA 不在这些记录中。Kenari、APIMaster、Murmell、ModelGrep、AvenChat、kimik3max、AIExtension 已在相应未合并分支出现，本表仅保留其排除结论并把域名汇入 main，绝不作为新发现计数。main 已到 Batch 22，故本次首批按跨批次语义记为 Batch 23。
+- **结果不凑数**：严格核验后仅 JTH IA 作为 1 个新发现。Kenari Grant 的 Kimi K3 免费 grant 证据已闭环，但 Kenari 已在未合并 Batch 23 分支记录和拉黑；其余候选分别因中文、BYOK、付费墙、目标模型/免费额度关联不明、支付方式不明或公司主体不透明而排除。
+- **复核边界**：JTH IA 官方仅公布 SPEI、OXXO、BanCoppel，未发现微信支付、支付宝或银联；未进入登录后动态 checkout，亦未注册、验证邮箱、购买 credits、提交 KYC 或发送真实模型请求。结论来自 2026-09-02 可访问的官网、公开 API、定价/条款/隐私页及公开前端代码；Claude 身份与计费次数未做模型指纹验证，只适合非敏感、小规模试用。
