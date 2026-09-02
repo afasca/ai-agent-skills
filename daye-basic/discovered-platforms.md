@@ -201,6 +201,23 @@ This file tracks all platforms discovered across batches to avoid duplicates.
 | Wraith | wraith-api.onrender.com | 未找到权威模型清单证明当前托管 Claude/GLM/Kimi，Gate 1 未验证 |
 | ModelGrep / LLM24 | modelgrep.com / llm24.net | 仅为价格/模型目录，免费条目指向已知服务商，不是实际 inference provider |
 | AvenChat / Kimi fan wrappers | avenchat.com / kimik3max.com / aiextension.ai | AvenChat 免费模型仅确认 Qwen/Gemma；Kimi fan/reference 页面无可核验运营主体；AIExtension 为工具目录而非 inference provider，均不作为合格发现 |
+| Macha | getmacha.com / dashboard.getmacha.com | 500 credits=$50、无到期、无卡，Claude Sonnet 5/4.5 均 9 credits/message；公开邮箱 OTP 流程表面 Easy 但未实测。支付经 Chargebee/Stripe/Razorpay，未检查商户 checkout，不能明确确认无支付宝/微信/银联，命中支付证据缺口→待复核排除 |
+| PlayCode | playcode.io / playcode.ai | Claude Fable 5 可选，新用户有 trial AI credits 且无需信用卡；但公开材料未明确证明 trial credits 可用于 Fable 5，目标模型与免费权益的关联不闭环 |
+| ModelGates | modelgates.ai / api.modelgates.ai / modelgates.com | 公开模型 API 含 `z-ai/glm-5.2:free`，free-variant 文档称零成本且 pricing 声明 free tier 无卡；但具体 free 模型页 404，且未验证实际 ModelGates 调用，免费 entitlement 可用性不足 |
+| KiosAPI | kiosapi.id / kiosapi.com / murakreatif.com | 精确 Claude Sonnet 5/Kimi K3/GLM-5.2 均为付费；免费 `zai/glm-4.7-flash` 有日配额，但 DOKU QRIS 官方文档正向列出 Alipay 与 UnionPay 跨境能力，命中支付排除 |
+| AllToken | alltoken.ai | 当前 providers 页明确 `free tier: 0`，最低预付 $10；历史 Claude/Kimi/GLM 活动不能证明当前免费权益，且运营方自称香港实体 |
+| Kapso | kapso.com / docs.kapso.ai | 旧 `$2 welcome credits + Claude Sonnet 4` 官方页现为 404；现行 Free 档与 AI Fields 文档无法把具体 Claude 型号和免费额度重新闭环，搜索缓存不采信 |
+| LiveKit / Ultravox / Tavus | livekit.com / ultravox.ai / tavus.io | 有免费 inference credits 或语音试用，但未证明免费权益承担具体 Claude/GLM/Kimi 型号；LiveKit 当前仅确认 Kimi K2.6，Claude 插件路径需外部 key |
+| Cartesia / Daily / Pipecat / Uttero | cartesia.ai / daily.co / pipecat.ai / uttero.dev | 免费权益覆盖语音/TTS/框架基础设施；目标模型路径需用户 provider key，属于 BYOK 或仅兼容 Claude Code/MCP |
+| Fixie / PlayAI / Open.cx / Humanloop | fixie.ai / play.ai / open.cx / humanloop.com | 未找到现行免费权益绑定具体目标模型；Humanloop 明确需用户 Anthropic key，Gate 1/2 失败 |
+| LangWatch / Agenta / Trigger.dev | langwatch.ai / agenta.ai / trigger.dev | 免费的是观测、评测或任务执行平台，不承担目标模型推理费用 |
+| Nanonets / Mindjoy / SchoolAI / MagicSchool | nanonets.com / mindjoy.com / schoolai.com / magicschool.ai | 有平台 credits、免费教育计划或 trial，但仅笼统提 Claude/外部材料，无法证明免费档固定覆盖某个具体 Claude 型号 |
+| You.com / Ninja AI / Hostinger Horizons | you.com / ninja.ai / hostinger.com | 免费档未明确包含当前具体目标模型；Hostinger 内部可能使用 Claude Sonnet 4.5，但不是用户可选择的明确免费托管模型权益，且属主流产品 |
+| Coze / AutoClaw | coze.com / autoclaw.z.ai / autoclaw.zhipuai.cn | 分别属于 ByteDance 与 Zhipu AI，存在中国实体、官方中文生态或中国大陆版本，直接排除 |
+| MegaLLM | megallm.io / ai.megallm.io | 精确 GLM/Claude 目录成立，但“try every model”属于 $10/月计划；未找到现行官方数值型零成本额度覆盖目标模型 |
+| Pabrik Ebook / Dominus AI | pabrikebook.com / dominusplatform.com | Pabrik Ebook 当前为停放域名且证书不匹配；Dominus 的 $1 赠金仅配自有 `dominus-flash/pro`，未证明目标模型 |
+| CognariAI / APIPick / API.co.id / Atomic Chat | cognariai.com / apipick.com / api.co.id / atomic.chat | 免费的是语音、搜索/工具、印尼公共 API 或本地下载模型，不是平台托管的 Claude/GLM/Kimi inference |
+| 其余新 gateway 线索 | openpipe.ai / withmartian.com / predibase.com / salad.com / fal.ai / unifai.ai / modelgate.ai / glmroutes.com / tokenless.com | 未找到可由现行第一方材料同时闭环“具体 Claude/GLM/Kimi + 真实零成本目标模型权益”；不采信缓存、兼容协议或第三方摘要 |
 
 ## Batch 2 Notes
 
@@ -245,3 +262,9 @@ This file tracks all platforms discovered across batches to avoid duplicates.
 - **跨分支去重**：除 main 的 1,547 条 avoid 记录与 Batch 1–22 tracker 外，本批联合检查了未合并分支 `origin/vorflux/batch-23-scout` @ `9d26f74`、`origin/vorflux/batch-23-strict-scout` @ `4e9a458`、`origin/vorflux/batch-24-scout` @ `223d12e`；JTH IA 不在这些记录中。Kenari、APIMaster、Murmell、ModelGrep、AvenChat、kimik3max、AIExtension 已在相应未合并分支出现，本表仅保留其排除结论并把域名汇入 main，绝不作为新发现计数。main 已到 Batch 22，故本次首批按跨批次语义记为 Batch 23。
 - **结果不凑数**：严格核验后仅 JTH IA 作为 1 个新发现。Kenari Grant 的 Kimi K3 免费 grant 证据已闭环，但 Kenari 已在未合并 Batch 23 分支记录和拉黑；其余候选分别因中文、BYOK、付费墙、目标模型/免费额度关联不明、支付方式不明或公司主体不透明而排除。
 - **复核边界**：JTH IA 官方仅公布 SPEI、OXXO、BanCoppel，未发现微信支付、支付宝或银联；未进入登录后动态 checkout，亦未注册、验证邮箱、购买 credits、提交 KYC 或发送真实模型请求。结论来自 2026-09-02 可访问的官网、公开 API、定价/条款/隐私页及公开前端代码；Claude 身份与计费次数未做模型指纹验证，只适合非敏感、小规模试用。
+
+## Batch 24 Notes
+
+- **跨分支去重与固化**：本批以 parent 的 Batch 1–23、1,570 条 avoid 域名及全部 `origin/vorflux/*scout` 分支为联合历史库；把所有未合并 scout 分支独有域名并入当前 canonical avoid 清单：本批新增 59 个候选域名，`origin/vorflux/batch-24-scout` @ `223d12e` 相对 parent 独有 371 个，再补齐 Batch 23 两条 scout 分支缺失的 113 个去重域名；最终由 1,570 增至 2,113 条，避免远端研究分支消失后被重新发现。旧 Batch 24 分支的 7 个收录项及全部排除项均视为已有，不重复收录。
+- **结果不凑数**：四路严格搜索后无平台通过全部硬门槛。Macha 的模型与免费权益最强，但商户级支付方式未验证，按 SKILL.md 的“Payment methods page confirms NO Chinese payment methods”要求排除。PlayCode 因 trial credits 是否覆盖 Fable 5 未闭环、ModelGates 因免费路由实际调用未验证而排除；KiosAPI 因 DOKU QRIS 明确覆盖 Alipay/UnionPay 被硬排除。
+- **复核边界**：未创建账号、验证 OTP、提交 KYC、绑卡、进入国家相关动态 checkout 或执行真实目标模型调用。Macha 的 500 credits 与 9 credits/message 来自 2026-09-02 可访问的官网定价页和 changelog；理论约 55 次为按 9 credits/完整响应的静态换算，实际 ticket/message/response 文案口径仍不统一。
