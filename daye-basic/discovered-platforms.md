@@ -59,6 +59,8 @@ This file tracks all platforms discovered across batches to avoid duplicates.
 | 21 | Retell AI | retellai.com | 2026-09-01（新账号一次性 $10 trial credits、无需付款方式，统一 credit balance 明确承担 voice/LLM/telephony；官方模型枚举与定价页确认托管 Claude Sonnet 5/4.6/4.5、Haiku 4.5；网页测试无需号码或付款方式，费用从 trial balance 扣除。⚠️ 不是通用文本中转而是 voice/chat agent builder；KYC 对出站电话/购号/SMS 为强制，可能自动通过，否则需 Persona 政府证件或人工审核。Retell AI Inc./美国/YC W24/$4.6M seed→低-中风险） |
 | 22 | Fleece AI | fleeceai.app | 2026-09-01（4 天 Starter 试用含 1,000 credits、5 agents，并明确含平台自有 deployment 的 Kimi K3；subprocessor 页确认 Modal Labs 托管其 Kimi K3 inference endpoint，非 BYOK。⚠️ 必须绑卡，4 天后自动转 €49/月；Starter 无 REST API，仅能在 agent/workflow UI 使用；Kimi 每任务 credit 换算未公示。FLEECE AI SASU/法国 SIREN 932329188/Loïc Jané/无已确认外部融资，SOC 2 仍 in progress、独立评价极少→中风险） |
 | 23 | JTH IA | jthia.jorgetellez.com.mx | 2026-09-02（西语墨西哥 Web UI；注册送 50 credits，ESPECTRO=Claude Sonnet 4.6、10 credits/次→至少 5 次；公开表单为邮箱/Firebase、无电话/绑卡/常规 KYC→注册表面 Easy，但实际赠金到账及首次免费调用耗时未实测；付款仅公开 SPEI/OXXO/BanCoppel；Jorge Téllez Hernández 以 Veracruz persona física con actividad empresarial 运营，未找到可验证的融资、独立口碑或 SLA，手工 WhatsApp 入账且不退款→高风险） |
+| 29 | Yale Clarity Platform | ai.yale.edu/yales-ai-tools-and-resources/clarity-platform | 2026-09-03（Yale 当前页面把 Claude Sonnet 4.6 agent、`at no cost` 与 `Costs: Free` 明确关联，并标注 `Chat limits: No limits`；未公示 token/context 上限，不得外推为无限 tokens，API 另按 Yale Chart of Accounts 月结。仅当前 Yale 师生员工、Yale 邮箱/NetID 可用→Very Hard / Effectively Closed；聊天面向 University work 与日常任务，custom agent/API 另需用例审批；Policy 1607 允许因角色而异的附带个人使用，非 Yale 目的商业使用一般禁止。Yale University 运营、五年 AI 投入超过 $150M→机构与托管风险低，实用可达性极低） |
+| 29 | Gooey.AI | gooey.ai | 2026-09-03（Free 档 $0、经 Google/Apple/GitHub/手机验证后一次性 500 credits、无卡，无政府证件/selfie KYC 公示→Moderate，官方意图即时到账但未实测首次使用耗时；明确 `Run all frontier LLMs`，当前第一方 `/llm` 页面列 Claude Fable 5 与 GLM 5.2，所展示的同一次 run breakdown 将两者各计 1 credit、另计 1 credit/run，FAQ 明示 credits 用于支付外部 AI 厂商 API。支付公开为 Stripe 信用/借记卡、PayPal，条款列 Visa/Mastercard/Amex/Affinity Card，未列微信/支付宝/银联。⚠️ Free 档为 non-commercial license，pricing 矩阵未把 API access 列入 Free，故只按网页公共 workflow 收录；未登录或实调。Dara.network Inc./美国（Seattle；条款适用 Delaware 法；注册州/成立日期未核实），官网列 10 人团队；未核实传统 VC 融资额，公开背景含 British Council 项目起源、NVIDIA Inception/Techstars→中风险） |
 
 ## Excluded Platforms
 
@@ -229,6 +231,25 @@ This file tracks all platforms discovered across batches to avoid duplicates.
 | Felo AI | felo.ai / openapi.felo.ai | 官网称免费用户可试 Claude Sonnet 5，公开 FAQ 仅列 Visa/Mastercard/AMEX；但有完整 `zh-Hans` 中文本地化和人民币定价，触发中文本地化硬排除。实时访客页还要求登录才能打开模型选择器，未执行真实调用 |
 | Modal | modal.com | 官网有每月 $30 compute credit 与 Kimi K3 页面，但共享 Kimi K3 API 面向 Team/Enterprise，免费档能否用该精确 endpoint 未闭环；同时属于主流云计算平台，不收录 |
 | Kilo | kilo.ai | Sonnet 4.6 仅“launch week”限时免费，当前已非稳定权益；常规路由按上游价格扣 credits，且 merchant 支付方式未完成无中式支付验证 |
+| CloudRift | cloudrift.ai | $100–$1,000 AI Grant 可用于 hosted endpoints，首页仅列 GLM/Kimi 家族但未披露确切型号或 model ID，无法把 grant 与目标型号闭环；人工审批且优先 Emmy 项目 |
+| Mancer AI | mancer.tech | 当前目录的 GLM 4.7 按 credits 收费，唯一可见免费模型为非目标 MythoLite；Stripe checkout 也未公开实际卡组织，Gate 2 失败 |
+| Metaprise AI | metaprise.ai | Kimi K2 Instruct 与 GLM-5 当前均标为按 token 付费；“85 free-tier models”未覆盖目标模型，Gate 2 失败 |
+| Infermatic | infermatic.ai | $0 Free 账户当前仅免费 TheDrummer/Rocinante-12B-v1.1，不含 Claude/GLM/Kimi；支付披露亦不完整 |
+| ChatMaxima | chatmaxima.com | “Kimi K2 for free”教程要求用户提供 OpenRouter API key，属于 BYOK 且经已排除的主流聚合器，不是平台承担推理费用 |
+| Autohive | autohive.com | Free 档 350K credits 与 Claude Opus 5 上线分别成立，但未有第一方页面或登录后 entitlement 证明免费 credits 能运行 Opus 5；billing 文档还与 pricing 的额度口径冲突 |
+| Kagi Assistant | kagi.com | Claude 4.5 Haiku/4.6 Sonnet/Opus 5 均标为 Ultimate；免费 Trial 不能使用，Ultimate 为 $25/月，Gate 2 失败 |
+| Arena / LMArena | arena.ai | 当前 Terms 称免费且公告/榜单出现 Opus 5，但无稳定实时 selector 证明普通免费用户可选；无 merchant 支付披露，目标权益与支付门槛均未闭环 |
+| GravityWrite | gravitywrite.com | Free 档 50 credits 无卡，但 Claude Opus 4.7 只列在付费 Pro；免费 credits 未绑定任何具体 Claude 型号 |
+| Harvard AI Sandbox | huit.harvard.edu / harvard.service-now.com | 当前 Sandbox 文档列 Claude，但现行受限身份页面未明确当前免费 entitlement；2023 pilot 的“free to use”不能替代 2026 当前证据 |
+| University of Florida NaviGator Toolkit | docs.ai.it.ufl.edu | 用户 $100/月只可用于本地部署模型；Claude Sonnet 4.6 属需团队批准、预算与计费的 cloud model，Gate 2 失败 |
+| U-M GPT | its.umich.edu / genai.umich.edu | 搜索线索指向校内免费 Claude/受限 Sonnet，但关键第一方正文核验时返回 access denied；不把索引摘要升级为证据 |
+| University of Miami Copilot Chat | miami.edu | 页面称 Claude Sonnet 可用，但另一当前说明要求 Copilot for Microsoft 365 license；无法证明所有目标模型用户零成本可达 |
+| UC Berkeley Campus AI Sandbox | ai.berkeley.edu | 校内有限 pilot 仅笼统列 Claude，未提供确切型号，也未明确该目标模型 entitlement 为免费 |
+| Stanford Claude for Education | uit.stanford.edu | Standard tier 对合格 Stanford 身份为 no-charge，但当前服务页未把该档明确绑定到具体 Claude 型号 |
+| Northumbria Claude for Education | northumbria.ac.uk | 校方资助 access 成立，但未公布所含 Claude 的确切型号，Gate 1 证据不足 |
+| Imperial Claude Hackathon | claude-hackathon-at-imperial.devpost.com | credits 取决于活动入选或奖项，属于短期活动福利，不是稳定平台 entitlement |
+| Gooey.AI Free API 主张（仅拒绝该主张） | gooey.ai / docs.gooey.ai / api.gooey.ai | 平台已按网页公共 workflow 收录；这里只排除 Free API 推断：pricing 对比矩阵把“API access to every workflow”放在 Pro。直接浏览 `/llm`/`/llm/api` 遇 Cloudflare challenge，精确模型与扣费由同 URL 的当前第一方文本视图复核；未登录或实调 |
+| Marblism | marblism.com | 付费档 $24/月起并要求卡信息；无零成本目标模型 entitlement |
 
 ## Batch 2 Notes
 
@@ -305,3 +326,9 @@ This file tracks all platforms discovered across batches to avoid duplicates.
 - **证据标准**：搜索摘要只用于发现线索，不作为收录依据；优惠须由当前第一方模型页、定价/条款或实时产品页闭环。TokenRouter 的 Kimi K3 活动与 AI Compute Australia 的 `WELCOME100` 均未在当前第一方页面确认仍有效，因此不构成当前免费权益。
 - **结果不凑数**：无新平台同时通过“具体 Claude/GLM/Kimi 型号 + 平台承担的当前真实免费权益 + merchant 页面明确无微信/支付宝/银联”全部硬门槛。Free.ai 第一方模型页明确显示 `GLM 5.3 requires purchased tokens`，其每日免费 tokens 不覆盖该目标模型，Gate 2 失败；Rewind.ai 的当前第一方页面可闭环 GLM 5.3、免费 tokens 和 Stripe/card-wallet 支付，但该域名已在历史 avoid 清单，故不重复收录。
 - **新增避免**：20 个本轮新出现的 host/别名已写入 avoid，包括既有产品子域名、官方 Kimi 别名、内容/评测站及证据不闭环的平台；未注册账号、提交 KYC、绑卡、充值或发送真实付费模型请求。
+
+## Batch 29 Notes
+
+- **从 Batch 28 继续并优先避免**：本轮以 `origin/vorflux/batch-28-careful-scout` 为直接基线，先读取其新增的 20 个 avoid host，再对 `avoid-domains.txt`、追踪表、子域名、旧品牌与产品别名联合去重。搜索摘要仅用于发现，不作为收录证据；静态宣传与实时产品状态冲突时优先相信实时页面。
+- **结果不凑数**：严格核验后收录 Yale Clarity 与 Gooey.AI 两项；其免费权益、用途/身份限制与风险边界见发现表。其余候选按免费权益不覆盖目标模型、型号或支付证据不足、BYOK、旧活动或正文不可验证等原因写入过滤表。
+- **验证边界与新增避免**：未注册账号、未验证 Gooey OAuth/手机或 Yale 校园身份、未绑卡、未进入动态 checkout，也未发送真实 Claude/GLM/Kimi 请求。Gooey pricing 以实时浏览器确认；精确 `/llm` 页面直接浏览触发 Cloudflare challenge，随后通过同 URL 的当前第一方文本视图核对模型、run cost 与 API 示例。共新增 50 个本轮 host/别名到 avoid，防止后续重复研究。
