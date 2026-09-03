@@ -250,6 +250,18 @@ This file tracks all platforms discovered across batches to avoid duplicates.
 | Imperial Claude Hackathon | claude-hackathon-at-imperial.devpost.com | credits 取决于活动入选或奖项，属于短期活动福利，不是稳定平台 entitlement |
 | Gooey.AI Free API 主张（仅拒绝该主张） | gooey.ai / docs.gooey.ai / api.gooey.ai | 平台已按网页公共 workflow 收录；这里只排除 Free API 推断：pricing 对比矩阵把“API access to every workflow”放在 Pro。直接浏览 `/llm`/`/llm/api` 遇 Cloudflare challenge，精确模型与扣费由同 URL 的当前第一方文本视图复核；未登录或实调 |
 | Marblism | marblism.com | 付费档 $24/月起并要求卡信息；无零成本目标模型 entitlement |
+| LumiChats | lumichats.com | 多模型聊天聚合/按日付费（约 ₹69/天 Day Pass），对比页见 Claude Sonnet 4.6 与 GLM 5；自称“每日 5 条免费消息、免费档无需卡”。直接抓取与文本代理均被 Vercel 安全验证 429 拦截，无法用第一方页面闭环免费 message 额度是否覆盖目标模型；印度 Chennai 个体/partnership、Aditya Kumar Jha 为 Data Controller，Razorpay 收款，无融资与可验证实体→证据不足 |
+| CrofAI | crof.ai | 首页列 glm-5.2 且可经 OpenAI 兼容接口访问，但“free account, no credit card”只免注册、按 token 计费、无任何免费推理额度；“by nahcrof”匿名运营、无实体/团队/融资→Gate 2 失败、高风险 |
+| Composio | composio.dev | 免费档 100k tool calls/月且无卡属实，但“1M LLM tokens/月（Sandbox）”未与托管 GLM/Kimi 具体型号绑定，集成文档常需用户自带 provider key→exact-model/free-entitlement 未闭环 |
+| Options Technology / PrivateMind | businesswire.com | Kimi K3 “no additional cost” 仅限现有付费企业客户，无公开个人自助注册路径→免费权益不可达 |
+| University of Toronto DSI Claude API Credit | datasciences.utoronto.ca | $1M 竞争性学术资助（Claude Code 最高 $10K、Research 最高 $100K），需 U of T 经费岗位/合格 PI/DSI 会员并经评审；绑定 Anthropic 官方 Console，且 utoronto.ca 已在 avoid→仅作记录不入发现 |
+| OctoLoops | octoloops.com | 有真实无卡免费档并送 10 runs，但全站零模型披露（未提 Claude/GLM/Kimi）→Gate 1 无法闭环；“Red Sky Forge”+Gmail 运营、无可验证实体 |
+| Tate-A-Tate | tate-a-tate.com | 首页 `lang="zh-Hans"`、高德 MCP 与虚拟主播定位→中文站点排除；可见模型仅 Gemini 3 Pro/DeepSeek/Nano Banana，无目标模型 |
+| Cosyra / Cronloop / Ipek / Memcode / AgentOne / Valet | cosyra.com · cronloop.ai · ipek.run · memcode.ai · agent-one.dev · valet.dev | 免费档为 BYOK（自带 Anthropic/OpenAI/OpenRouter key 或桌面本地），平台不为目标模型承担推理费用或未披露托管 model lane→硬排除 |
+| MyClaw | myclaw.ai | 托管 OpenClaw/Claude-Code 但仅有付费档，且“AI token usage 不含在订阅内”→无免费推理 |
+| Albato / BotPenguin / CatDoes | albato.com · botpenguin.com · catdoes.com | 免费档不覆盖目标模型或全站未披露模型后端（Albato AI 免费/Tier 不工作、BotPenguin 仅 ChatGPT、CatDoes 无任何模型披露） |
+| aifreeapi.com | aifreeapi.com | 默认简体中文内容/目录站（`/zh` 等多语种、术语如“旗舰”），无可验证推理 endpoint，/terms 404 回首页→中文硬排除且非推理服务 |
+| LSE Claude for Education | info.lse.ac.uk | Anthropic 官方 C4E 渠道，经大学 SSO、具体型号未披露→官方渠道黑名单 + Gate 1 证据不足（Northumbria 已于 Batch 29 单独记录，不重复） |
 
 ## Batch 2 Notes
 
@@ -332,3 +344,10 @@ This file tracks all platforms discovered across batches to avoid duplicates.
 - **从 Batch 28 继续并优先避免**：本轮以 `origin/vorflux/batch-28-careful-scout` 为直接基线，先读取其新增的 20 个 avoid host，再对 `avoid-domains.txt`、追踪表、子域名、旧品牌与产品别名联合去重。搜索摘要仅用于发现，不作为收录证据；静态宣传与实时产品状态冲突时优先相信实时页面。
 - **结果不凑数**：严格核验后收录 Yale Clarity 与 Gooey.AI 两项；其免费权益、用途/身份限制与风险边界见发现表。其余候选按免费权益不覆盖目标模型、型号或支付证据不足、BYOK、旧活动或正文不可验证等原因写入过滤表。
 - **验证边界与新增避免**：未注册账号、未验证 Gooey OAuth/手机或 Yale 校园身份、未绑卡、未进入动态 checkout，也未发送真实 Claude/GLM/Kimi 请求。Gooey pricing 以实时浏览器确认；精确 `/llm` 页面直接浏览触发 Cloudflare challenge，随后通过同 URL 的当前第一方文本视图核对模型、run cost 与 API 示例。共新增 50 个本轮 host/别名到 avoid，防止后续重复研究。
+
+## Batch 30 Notes
+
+- **结果不凑数：0 个新平台通过全部硬门槛。** 四路（Claude-niche、GLM/Kimi-niche、workflow-builder、regional/academic/launch）合并去重后评估约 90 个新线索，无一同时满足“具体 Claude/GLM/Kimi 型号 + 平台承担的当前免费权益 + merchant 页面明确无微信/支付宝/银联 + 可验证实体与背景”。本轮模式延续 Batch 24–29 的收敛趋势：可发现的合法平台托管免费 Claude 空间已趋枯竭，新线索几乎都是 BYOK/本地工具、内容目录站、中文默认转发、付费-only 或官方 Anthropic 渠道。
+- **唯一有信号者 LumiChats 未能闭环**：多模型聊天聚合器（按日付费 Day Pass），自有对比页见 Claude Sonnet 4.6 与 GLM 5，自称“每日 5 条免费消息、无卡”。但官方页被 Vercel 安全验证以 429 拦截，直接与文本代理均无法取证，无法证明免费额度覆盖目标模型；且为印度个体/partnership、Razorpay 收款、无可验证融资或实体。按“必须第一方当前页面闭环”规则写入过滤日志，不收录。
+- **重点过滤**：CrofAI 免费账号不送推理额度；Composio 免费 tool/token 额度与托管 GLM/Kimi 未绑定；Options/PrivateMind 的 Kimi K3“不额外收费”仅限现有企业客户；U of T DSI 为评审制学术资助且域名已 avoid；OctoLoops 无模型披露；Tate-A-Tate 中文默认；Cosyra/Cronloop/Ipek/Memcode/AgentOne/Valet 等为 BYOK/本地；MyClaw 付费且 token 另算；Albato/BotPenguin/CatDoes 免费档无目标模型。
+- **验证边界**：未创建账号、未验证 OAuth/校园身份、未绑卡、未进入动态 checkout、未发送真实目标模型请求；LumiChats 因 429 无法使用官方页面直连取证（浏览器侧亦未绕过 Vercel 验证）。共新增 73 个本轮 host/别名到 avoid，防止后续重复研究。
