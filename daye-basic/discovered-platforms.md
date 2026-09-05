@@ -61,6 +61,7 @@ This file tracks all platforms discovered across batches to avoid duplicates.
 | 23 | JTH IA | jthia.jorgetellez.com.mx | 2026-09-02（西语墨西哥 Web UI；注册送 50 credits，ESPECTRO=Claude Sonnet 4.6、10 credits/次→至少 5 次；公开表单为邮箱/Firebase、无电话/绑卡/常规 KYC→注册表面 Easy，但实际赠金到账及首次免费调用耗时未实测；付款仅公开 SPEI/OXXO/BanCoppel；Jorge Téllez Hernández 以 Veracruz persona física con actividad empresarial 运营，未找到可验证的融资、独立口碑或 SLA，手工 WhatsApp 入账且不退款→高风险） |
 | 29 | Yale Clarity Platform | ai.yale.edu/yales-ai-tools-and-resources/clarity-platform | 2026-09-03（Yale 当前页面把 Claude Sonnet 4.6 agent、`at no cost` 与 `Costs: Free` 明确关联，并标注 `Chat limits: No limits`；未公示 token/context 上限，不得外推为无限 tokens，API 另按 Yale Chart of Accounts 月结。仅当前 Yale 师生员工、Yale 邮箱/NetID 可用→Very Hard / Effectively Closed；聊天面向 University work 与日常任务，custom agent/API 另需用例审批；Policy 1607 允许因角色而异的附带个人使用，非 Yale 目的商业使用一般禁止。Yale University 运营、五年 AI 投入超过 $150M→机构与托管风险低，实用可达性极低） |
 | 29 | Gooey.AI | gooey.ai | 2026-09-03（Free 档 $0、经 Google/Apple/GitHub/手机验证后一次性 500 credits、无卡，无政府证件/selfie KYC 公示→Moderate，官方意图即时到账但未实测首次使用耗时；明确 `Run all frontier LLMs`，当前第一方 `/llm` 页面列 Claude Fable 5 与 GLM 5.2，所展示的同一次 run breakdown 将两者各计 1 credit、另计 1 credit/run，FAQ 明示 credits 用于支付外部 AI 厂商 API。支付公开为 Stripe 信用/借记卡、PayPal，条款列 Visa/Mastercard/Amex/Affinity Card，未列微信/支付宝/银联。⚠️ Free 档为 non-commercial license，pricing 矩阵未把 API access 列入 Free，故只按网页公共 workflow 收录；未登录或实调。Dara.network Inc./美国（Seattle；条款适用 Delaware 法；注册州/成立日期未核实），官网列 10 人团队；未核实传统 VC 融资额，公开背景含 British Council 项目起源、NVIDIA Inception/Techstars→中风险） |
+| 31 | Cabina.AI | cabina.ai | 2026-09-05（Free Forever 档 50 Cabina Tokens，Claude 第一方页明确新用户可用免费 tokens 试 Claude，当前目录含 Claude Sonnet/Opus/Haiku，另有 kimi-k3；免费余额数量小且具体 Claude 扣费随模型变化。邮箱或 Google 注册、无卡/电话/政府证件公示→Easy、预计数分钟但未实测；免费账号输出仅限个人用途，升级付费前不适用用户知识产权归属规则。当前 pricing 的“可用付款方式”列 WayForPay Visa/Mastercard、Apple Pay、Google Pay、WhitePay crypto，以及申请制 IBAN invoice（最低等值 $1,000），未列微信/支付宝/银联。乌克兰 Kyiv 团队、2024 年左右成立；页脚命名 RIVERSUN LLC，但其辖区、注册号及与 Cabina 的法律关系未核实；About 列 4 位 co-founder，而 Contact 称 3 位 founders，官方披露冲突；融资仅有加速器线索、Trustpilot 样本极少且褒贬不一→高风险，仅建议消耗免费余额） |
 
 ## Excluded Platforms
 
@@ -262,6 +263,30 @@ This file tracks all platforms discovered across batches to avoid duplicates.
 | Albato / BotPenguin / CatDoes | albato.com · botpenguin.com · catdoes.com | 免费档不覆盖目标模型或全站未披露模型后端（Albato AI 免费/Tier 不工作、BotPenguin 仅 ChatGPT、CatDoes 无任何模型披露） |
 | aifreeapi.com | aifreeapi.com | 默认简体中文内容/目录站（`/zh` 等多语种、术语如“旗舰”），无可验证推理 endpoint，/terms 404 回首页→中文硬排除且非推理服务 |
 | LSE Claude for Education | info.lse.ac.uk | Anthropic 官方 C4E 渠道，经大学 SSO、具体型号未披露→官方渠道黑名单 + Gate 1 证据不足（Northumbria 已于 Batch 29 单独记录，不重复） |
+| Qolaba | qolaba.ai | Claude Opus 4.8/Sonnet 4.6、400 注册 credits、无卡与约 10/5 credits 每请求已闭环；但 Terms 称 major cards “including” Visa/Mastercard/Amex/Discover，该非穷举表述不能证明 UnionPay 不支持，且未检查商户 checkout→支付硬门槛未闭环 |
+| ATXP Chat | atxp.chat | Claude Opus 4.8/Sonnet 4.6 与 $3 无卡赠金已闭环；只披露 Stripe Payment Links/USDC/MoonPay，商户 checkout 未列实际卡组织，无法排除 UnionPay→支付硬门槛未闭环 |
+| SurfSense Cloud | surfsense.com | Claude Sonnet 5 与 $5 注册 credits、无卡已闭环；支付仅披露 unnamed processor/Stripe 代码路径，未列商户卡组织，且 Terms 无法律实体/辖区→支付证据不足、中高风险 |
+| Venice AI | venice.ai | 实时目录有 GLM-5.2/5.3、Kimi K3，模型页称每日免费 allowance+500 welcome credits 无卡；但 pricing 矩阵与该文案冲突，且有完整官方简中 docs，命中中文本地化硬排除 |
+| APIsRouter | apisrouter.com | 第一方 free-glm-api 页称无卡 starter credit 可用于 glm-5.2；额度/有效期、付款轨道、注册要求及法律实体均未披露→支付与公司证据不足、高风险 |
+| Kie.ai | kie.ai | Kimi K3 当前仍标 Coming Soon/early access，且有完整简中站与文档→Gate 1 未上线并命中中文本地化排除 |
+| EvoLink | evolink.ai | Kimi K3 当前路由为付费，10 credits 来自非 EvoLink 内容站而非当前第一方；另有 `/zh` 且 pricing 明示支付宝/微信支付→多项硬排除 |
+| Atlas Cloud | atlascloud.ai | 有 GLM-5.2/Kimi K3 与笼统注册送 credits，但未证明赠金覆盖具体目标模型；完整中文站且 billing 明示支付宝/微信支付→硬排除 |
+| Token Harbor | tokenharbor.ai | `kimi-k3:free` 仅为 2026-08-06 至 08-13 的已结束活动；当前 Free tier 不含 Kimi K3/Claude Sonnet 5→Gate 2 失败 |
+| Overchat AI | overchat.ai | 当前 Free plan 仅基础 GPT；Claude 4.6/4.8 在 Pro，泛称每日 credits 不能覆盖具体目标模型→Gate 2 失败 |
+| NinjaChat | ninjachat.ai | Claude Sonnet 4.6 免费主张较强，但 sitemap 有完整 `/zh-Hans/` locale；支付只披露 Stripe 未列商户卡组织，另有退款/支持投诉→中文硬排除 |
+| Netus AI | netus.ai | 当前目录有 Claude Sonnet 5/Opus，但 Free plan 50 credits 只适用于 7 个明确列名的非 Claude 模型；Claude 需付费解锁→Gate 2 失败 |
+| XXAI / HIXX | hixx.ai | 每日 100 credits 与 Claude Sonnet/Haiku 4.5 直接关联，但平台维护完整 `/zh` 中文站→中文本地化硬排除 |
+| 1min.AI | 1min.ai | Claude Fable 5 与每日免费 credits 存在，但官方 billing support 明示 Alipay/WeChat Pay→支付硬排除 |
+| Warp | warp.dev | Free 用户前两月 150、此后 75 AI credits/月且可选 Claude Sonnet 4.6；商户只披露 Stripe/card/Link/Apple Pay/Google Pay，未列实际卡组织以排除 UnionPay；且属较知名开发工具→严格排除 |
+| Zed | zed.dev | 14 天/$20 token trial 无卡且 hosted Claude Sonnet 4.6 可用；billing 仅笼统写 Stripe/credit card，未列商户卡网络→支付硬门槛未闭环 |
+| Gumloop | gumloop.com | 14 天 Pro trial 可运行 Claude 5 Sonnet 等托管模型，但必须绑卡自动续费；仅披露 card/PayPal/Stripe，未列商户卡组织→支付证据不足 |
+| MindStudio | mindstudio.ai | 模型页称 Claude 5 Sonnet workflow 可免费创建，但 pricing 同时为 `$0 + usage`，无免费模型余额或可调用数量；Stripe 商户卡网络亦未披露→Gate 2/支付均不闭环 |
+| Augment Code | augmentcode.com | Free 4,000 credits 无卡与 Claude Sonnet 5 目录分别成立，但第一方未把免费 credits 明确绑定全模型，且 pricing/support 表述有时序冲突、付款卡网络未公开→证据不足 |
+| VectorShift | vectorshift.ai | Free 注册送 $1 AI credits，Anthropic node 默认 claude-sonnet-4-6；Terms 只笼统写 credit card/payment processor、未列支付轨道→支付硬门槛未闭环 |
+| Lyzr | lyzr.ai | Claude 目录与每月免费 credits 可关联，但同站出现 5 与 500 credits/月的百倍冲突；支付轨道/卡组织未披露→权益口径和支付证据不足 |
+| GitLab Duo Agent Platform | gitlab.com | Ultimate 试用含 Duo、Sonnet 5 可用，但 GitLab 是高度主流平台，不作为新发现；付款卡网络也未按严格门槛公开 |
+| FriendliAI | friendli.ai | 托管 GLM-5.2/5.3 当前按 token 付费；通用 trial/promotional credits 未在当前目标模型页与该路由明确绑定→Gate 2 证据不足 |
+| OrcaRouter | orcarouter.ai | 免费 Hacker 计划只免 gateway subscription/markup，GLM-5.2 仍按上游 token 费计量→无平台承担的免费目标模型推理，Gate 2 失败 |
 
 ## Batch 2 Notes
 
@@ -351,3 +376,10 @@ This file tracks all platforms discovered across batches to avoid duplicates.
 - **唯一有信号者 LumiChats 未能闭环**：多模型聊天聚合器（按日付费 Day Pass），自有对比页见 Claude Sonnet 4.6 与 GLM 5，自称“每日 5 条免费消息、无卡”。但官方页被 Vercel 安全验证以 429 拦截，直接与文本代理均无法取证，无法证明免费额度覆盖目标模型；且为印度个体/partnership、Razorpay 收款、无可验证融资或实体。按“必须第一方当前页面闭环”规则写入过滤日志，不收录。
 - **重点过滤**：CrofAI 免费账号不送推理额度；Composio 免费 tool/token 额度与托管 GLM/Kimi 未绑定；Options/PrivateMind 的 Kimi K3“不额外收费”仅限现有企业客户；U of T DSI 为评审制学术资助且域名已 avoid；OctoLoops 无模型披露；Tate-A-Tate 中文默认；Cosyra/Cronloop/Ipek/Memcode/AgentOne/Valet 等为 BYOK/本地；MyClaw 付费且 token 另算；Albato/BotPenguin/CatDoes 免费档无目标模型。
 - **验证边界**：未创建账号、未验证 OAuth/校园身份、未绑卡、未进入动态 checkout、未发送真实目标模型请求；LumiChats 因 429 无法使用官方页面直连取证（浏览器侧亦未绕过 Vercel 验证）。共新增 73 个本轮 host/别名到 avoid，防止后续重复研究。
+
+## Batch 31 Notes
+
+- **权威边界**：本轮以当前 `main` 的 tracker 为硬去重来源。最新提交 `6ca5c74` 主动清空了 `avoid-domains.txt`，因此没有恢复或继续写入旧 2,275 条名单；上一提交中的名单只用于历史重复提示，不能替代当前候选核验。
+- **四路搜索**：A=新兴 Claude 中转/聊天；B=GLM/Kimi API 与 inference；C=coding agent、workflow、startup/academic credits；D=欧洲、日韩、印度、东南亚、中东、非洲、拉美及 Product Hunt/Show HN/GitHub 新发布。搜索覆盖 `Claude Sonnet 5 free credits`、`Claude Opus 4.8 no card`、`GLM-5.3 free API`、`Kimi K3 trial credits`、区域语言与发布渠道组合。搜索摘要只用于找线索，收录均回到当前第一方页面复核。
+- **结果不凑数**：严格核验后仅收录 **Cabina.AI**。Cabina 的免费余额与 Claude 免费路径成立，但额度很小、免费输出仅限个人用途，且运营实体与 founder 数量的当前第一方披露互相冲突，只建议试用、不建议充值。Qolaba 的具体 Claude 型号、400 credits 与无卡路径虽很强，但 Terms 对卡组织使用非穷举的 “including” 表述，不能证明 UnionPay 不支持，故降入过滤日志；其余候选按中文本地化、禁止支付方式、免费权益未覆盖目标模型、活动已结束、过于主流或商户支付网络未闭环排除。
+- **验证边界**：未注册账号、未验证邮箱/OAuth、未绑卡、未进入登录后动态 checkout、未提交 KYC，也未发送真实 Claude/GLM/Kimi 请求。Cabina 只确认 50 tokens 与 Claude 免费入口，不承诺固定消息数。Qolaba 的理论 80 次 Sonnet 4.6/40 次 Opus 4.8 虽可按官方约 5/10 credits 每请求静态换算，但因支付硬门槛未闭环未予收录。
