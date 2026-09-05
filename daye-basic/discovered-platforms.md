@@ -383,3 +383,4 @@ This file tracks all platforms discovered across batches to avoid duplicates.
 - **四路搜索**：A=新兴 Claude 中转/聊天；B=GLM/Kimi API 与 inference；C=coding agent、workflow、startup/academic credits；D=欧洲、日韩、印度、东南亚、中东、非洲、拉美及 Product Hunt/Show HN/GitHub 新发布。搜索覆盖 `Claude Sonnet 5 free credits`、`Claude Opus 4.8 no card`、`GLM-5.3 free API`、`Kimi K3 trial credits`、区域语言与发布渠道组合。搜索摘要只用于找线索，收录均回到当前第一方页面复核。
 - **结果不凑数**：严格核验后仅收录 **Cabina.AI**。Cabina 的免费余额与 Claude 免费路径成立，但额度很小、免费输出仅限个人用途，且运营实体与 founder 数量的当前第一方披露互相冲突，只建议试用、不建议充值。Qolaba 的具体 Claude 型号、400 credits 与无卡路径虽很强，但 Terms 对卡组织使用非穷举的 “including” 表述，不能证明 UnionPay 不支持，故降入过滤日志；其余候选按中文本地化、禁止支付方式、免费权益未覆盖目标模型、活动已结束、过于主流或商户支付网络未闭环排除。
 - **验证边界**：未注册账号、未验证邮箱/OAuth、未绑卡、未进入登录后动态 checkout、未提交 KYC，也未发送真实 Claude/GLM/Kimi 请求。Cabina 只确认 50 tokens 与 Claude 免费入口，不承诺固定消息数。Qolaba 的理论 80 次 Sonnet 4.6/40 次 Opus 4.8 虽可按官方约 5/10 credits 每请求静态换算，但因支付硬门槛未闭环未予收录。
+- **去重名单**：应用户要求，将本轮报告覆盖的 43 个站点域名写入当前 `avoid-domains.txt`；没有恢复历史已清空的 2,275 条旧名单。
